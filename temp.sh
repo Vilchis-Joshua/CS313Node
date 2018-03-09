@@ -3,6 +3,6 @@
 git add .
 read answer
 git commit -m "${answer}"
-git push github master 
+git push
 git push heroku master
 clear
