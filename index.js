@@ -2,12 +2,15 @@ var express = require('express');
 var app = express();
 var url = require('url');
 
-app.set('port', (process.env.PORT || 8080));
+app.set('port', (process.env.PORT || 5000));
 const connectionString = 'postgres://postgres:hello@localhost:5433/NodeProject';
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+app.get('/', (req, res) => {
+
+})
 
 
 //======================================  Week09   ===================================
@@ -249,4 +252,5 @@ function access(req, res) {
 
 app.listen(app.get('port'), () => console.log('listening to: ' + app.get('port')));
 
-//to parse a heroku-node-js connection string https://github.com/iceddev/pg-connection-string
+// To parse a heroku-node-js connection string https://github.com/iceddev/pg-connection-string
+// NASA api ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo
